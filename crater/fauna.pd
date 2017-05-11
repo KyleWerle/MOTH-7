@@ -13,8 +13,8 @@
 #X obj 533 340 select 0 1 2 3 4 5 6;
 #X obj 533 245 r START-BANG;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-sample 2289 float 2;
-#X coords 0 1 2289 -1 200 140 1 0 0;
+#X array \$0-sample 5752 float 2;
+#X coords 0 1 5752 -1 200 140 1 0 0;
 #X restore 637 186 graph;
 #X obj 533 556 t s b;
 #X obj 586 556 symbol \$0-sample;
@@ -159,15 +159,15 @@
 #X connect 56 1 55 0;
 #X connect 56 1 58 1;
 #X connect 56 2 55 0;
-#X connect 56 2 57 1;
 #X connect 56 2 66 0;
 #X connect 56 2 82 1;
+#X connect 56 2 57 1;
 #X connect 56 3 10 0;
 #X connect 56 3 55 0;
-#X connect 56 3 57 1;
 #X connect 56 3 66 0;
 #X connect 56 3 76 0;
 #X connect 56 3 82 1;
+#X connect 56 3 57 1;
 #X connect 57 0 9 0;
 #X connect 58 0 63 0;
 #X connect 59 0 88 0;
