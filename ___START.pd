@@ -1,14 +1,9 @@
-#N canvas 358 50 449 423 10;
-#X obj 341 48 r INIT-BANG;
-#X msg 341 70 color 6;
+#N canvas 358 50 381 449 10;
+#X declare -path crater;
 #X obj 39 46 cnv 30 300 300 empty \$0-initCol empty 20 12 0 14 -233017
 -66577 0;
-#X obj 341 92 s \$0-initCol;
 #X obj 91 248 cnv 15 200 50 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 341 115 r START-BANG;
-#X msg 341 137 color 10;
-#X obj 341 159 s \$0-initCol;
 #X text 164 227 V, f 2;
 #X text 192 204 V;
 #X text 308 265 <;
@@ -37,7 +32,18 @@
 #X text 65 146 wait for the green light \;;
 #X text 64 163 click __MOTH-7 \;;
 #X obj 156 266 __MOTH-7;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
+#N canvas 584 563 450 300 shrine 0;
+#X obj 10 41 declare -path crater;
+#X text 11 15 declares path for abstractions;
+#X obj 10 96 r INIT-BANG;
+#X msg 10 118 color 6;
+#X obj 10 140 s \$0-initCol;
+#X obj 10 163 r START-BANG;
+#X msg 10 185 color 10;
+#X obj 10 207 s \$0-initCol;
+#X text 13 75 startup color shifts;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
+#X restore 44 400 pd shrine;

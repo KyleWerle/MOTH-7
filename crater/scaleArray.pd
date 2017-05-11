@@ -1,0 +1,15 @@
+#N canvas 404 192 450 300 10;
+#X msg 253 85 \; scaleArray 0 0 2 3 5 7 8 10;
+#X text 270 67 minor C;
+#X msg 269 164 \; scaleArray 0 3 4 4 8 9 11 16;
+#X text 274 145 ryuku E;
+#N canvas 0 50 450 110 (subpatch) 0;
+#X array scaleArray 7 float 3;
+#A 0 3 4 4 8 9 11 16;
+#X coords 0 24 7 0 100 50 1 0 0;
+#X restore 100 115 graph;
+#X msg 109 36 \; scaleArray 0 0 1 3 5 6 8 10;
+#X text 111 18 phrygian F;
+#X msg 109 207 \; scaleArray 0 1 4 6 6 9 11 13;
+#X text 112 189 min pentatonic F#;
+#X coords 0 -1 1 1 100 65 2 100 100;
