@@ -1,5 +1,5 @@
-#N canvas 495 216 443 192 10;
-#N canvas 419 151 881 453 subp 0;
+#N canvas 453 220 443 192 10;
+#N canvas 431 193 881 453 subp 0;
 #X floatatom 2 63 1 0 0 0 - ON OFF/ON, f 1;
 #X obj 100 33 cnv 15 320 20 empty empty empty 20 12 0 14 -261234 -1
 0;
@@ -42,7 +42,7 @@ would cause instantaneous melting of mind and body;
 #X msg 128 93 \$1 30;
 #X obj 244 147 send eyes;
 #X obj 244 267 send mouth;
-#X obj 128 34 random 100;
+#X obj 128 34 neuron 100;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
 #X connect 4 0 2 0;
@@ -767,11 +767,11 @@ otherwise \, Feeder will become too chatty.;
 #X obj 14 16 cnv 15 50 50 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 19 41 hsl 15 10 0 127 0 0 hidesend eyes empty -2 -8 0 10 -258113
--257985 -1 827 1;
+-257985 -1 220 1;
 #X obj 37 28 hsl 7 10 0 127 0 0 hidesend eyes empty -2 -8 0 10 -258113
--257985 -1 354 1;
+-257985 -1 94 1;
 #X obj 45 41 hsl 15 10 0 127 0 0 hidesend eyes empty -2 -8 0 10 -258113
--257985 -1 827 1;
+-257985 -1 220 1;
 #X text 107 33 My portal is in the bottom left;
 #N canvas 489 96 369 127 my_EYES 0;
 #X text 13 52 I see all at all times.;

@@ -1,8 +1,14 @@
-#N canvas 358 50 382 430 10;
-#X obj 39 46 cnv 30 300 300 empty initCol empty 20 12 0 14 -233017
+#N canvas 358 50 449 423 10;
+#X obj 341 48 r INIT-BANG;
+#X msg 341 70 color 6;
+#X obj 39 46 cnv 30 300 300 empty \$0-initCol empty 20 12 0 14 -233017
 -66577 0;
+#X obj 341 92 s \$0-initCol;
 #X obj 91 248 cnv 15 200 50 empty empty empty 20 12 0 14 -262144 -66577
 0;
+#X obj 341 115 r START-BANG;
+#X msg 341 137 color 10;
+#X obj 341 159 s \$0-initCol;
 #X text 164 227 V, f 2;
 #X text 192 204 V;
 #X text 308 265 <;
@@ -12,14 +18,14 @@
 #X text 177 300 ^;
 #X text 214 224 v;
 #X text 140 203 v;
-#X obj 132 69 tgl 50 0 awareness initCol empty 17 7 0 10 -204800 -1
--1 0 1;
-#X obj 199 69 tgl 50 0 emergence initCol empty 17 7 0 10 -204800 -1
--1 0 1;
-#X obj 65 69 tgl 50 0 consciousness initCol empty 20 20 0 10 -204800
+#X obj 132 69 tgl 50 0 awareness \$0-initCol empty 17 7 0 10 -204800
 -1 -1 0 1;
-#X obj 266 69 bng 50 250 50 0 activate initCol empty 17 7 0 10 -204800
--1 -1;
+#X obj 199 69 tgl 50 0 emergence \$0-initCol empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 65 69 tgl 50 0 consciousness \$0-initCol empty 20 20 0 10 -204800
+-1 -1 0 1;
+#X obj 266 69 bng 50 250 50 0 activate \$0-initCol empty 17 7 0 10
+-204800 -1 -1;
 #X text 43 349 by wo3 \; • usage: CC \, BY \; • no warranties \;
 • contact: werle.kyle@gmail.com \;;
 #X text 85 50 1;
@@ -31,3 +37,7 @@
 #X text 65 146 wait for the green light \;;
 #X text 64 163 click __MOTH-7 \;;
 #X obj 156 266 __MOTH-7;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
