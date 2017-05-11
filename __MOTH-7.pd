@@ -1,4 +1,4 @@
-#N canvas 678 22 738 917 10;
+#N canvas 785 22 738 917 10;
 #X obj 22 96 midi_bpm2ms;
 #N canvas 363 278 299 207 4x4Seq 0;
 #X obj 27 38 inlet;
@@ -9,17 +9,17 @@
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X restore 80 208 pd 4x4Seq;
-#X obj 22 147 metro;
-#X obj 112 97 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 22 146 metro;
+#X obj 112 97 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 308 154 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 393 118 keyup;
 #X obj 393 138 select 122;
-#X obj 320 574 cnv 30 1 1 empty empty abyss 20 12 0 12 -262144 -191407
+#X obj 351 625 cnv 30 1 1 empty empty abyss 20 12 0 12 -262144 -191407
 0;
 #X obj 22 17 r START-BANG;
-#X obj 285 137 r START-BANG;
+#X obj 285 139 r START-BANG;
 #X obj 22 244 s MAIN;
 #X obj 308 64 s NEW-SEED;
 #X obj 80 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -51,22 +51,22 @@
 #X connect 11 0 3 0;
 #X connect 11 0 8 0;
 #X restore 138 17 pd startup;
-#N canvas 810 353 449 300 MAINclock 0;
+#N canvas 616 344 449 300 MAINclock 0;
 #X obj 105 133 f;
 #X obj 136 133 + 1;
-#X obj 136 154 mod 16;
 #X obj 124 94 midiClockReceive;
 #X obj 105 71 inlet;
 #X obj 105 179 outlet;
 #X obj 248 178 outlet;
+#X obj 136 154 mod 16;
 #X connect 0 0 1 0;
-#X connect 0 0 5 0;
-#X connect 1 0 2 0;
-#X connect 2 0 0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 2 1 0 0;
+#X connect 2 1 5 0;
 #X connect 3 0 0 0;
-#X connect 3 1 0 0;
-#X connect 3 1 6 0;
-#X connect 4 0 0 0;
+#X connect 6 0 0 1;
 #X restore 22 168 pd MAINclock;
 #X obj 115 189 s ZERO;
 #X obj 194 187 r MAIN;
@@ -111,28 +111,30 @@
 #X obj 404 260 markovChain;
 #X obj 561 344 select 0 1 2 3;
 #X obj 100 555 filterTides;
-#X obj 521 587 filterTides;
+#X obj 521 617 filterTides;
 #X obj 116 593 overgrowth;
 #X obj 98 628 dawnChorus 22 28;
-#X obj 500 625 dawnChorus 28 22;
+#X obj 500 655 dawnChorus 28 22;
 #X obj 382 22 cnv 30 1 1 empty empty primordialEmpire 20 12 0 32 -262144
 -1 0;
 #X obj 451 59 cnv 30 1 1 empty empty MOTH-7 20 12 0 32 -262144 -1 0
 ;
 #X obj 447 735 cnv 30 1 1 empty empty thicket_relics_hidden 20 12 0
 12 -262144 -1 0;
-#X obj 253 555 cnv 30 1 1 empty empty monument_to_infinity 20 12 0
+#X obj 284 606 cnv 30 1 1 empty empty monument_to_infinity 20 12 0
 12 -262144 -1 0;
-#X obj 488 547 overgrowth;
-#X obj 352 658 adc~;
 #X obj 22 188 t f f;
-#X obj 477 434 fauna c;
 #X obj 22 57 neuron 100;
 #X obj 42 36 r NEW-SEED;
 #X obj 22 77 + 60;
-#X obj 337 434 fauna b;
 #X obj 47 434 fauna k;
+#X obj 488 577 overgrowth;
+#X obj 477 434 fauna c;
+#X obj 337 434 fauna b;
 #X obj 203 434 fauna a;
+#X obj 266 252 s meteor;
+#X obj 326 494 r meteor;
+#X obj 326 514 t b b b b;
 #X connect 0 0 2 1;
 #X connect 1 0 12 0;
 #X connect 2 0 15 0;
@@ -140,10 +142,10 @@
 #X connect 4 0 19 1;
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
-#X connect 8 0 44 0;
+#X connect 8 0 41 0;
 #X connect 9 0 4 0;
 #X connect 13 0 11 0;
-#X connect 15 0 42 0;
+#X connect 15 0 40 0;
 #X connect 15 1 16 0;
 #X connect 17 0 19 0;
 #X connect 18 0 19 2;
@@ -154,30 +156,29 @@
 #X connect 22 0 27 0;
 #X connect 24 0 31 1;
 #X connect 24 0 32 1;
+#X connect 24 1 44 0;
 #X connect 24 1 47 0;
-#X connect 24 1 48 0;
-#X connect 24 2 43 0;
-#X connect 24 2 49 0;
+#X connect 24 2 46 0;
+#X connect 24 2 48 0;
 #X connect 24 3 26 0;
 #X connect 24 3 27 0;
-#X connect 24 3 34 1;
-#X connect 24 3 35 1;
-#X connect 24 3 43 0;
+#X connect 24 3 44 0;
+#X connect 24 3 46 0;
 #X connect 24 3 47 0;
 #X connect 24 3 48 0;
 #X connect 24 3 49 0;
 #X connect 26 0 28 0;
 #X connect 27 0 30 0;
+#X connect 29 2 44 0;
 #X connect 29 2 47 0;
-#X connect 29 2 48 0;
 #X connect 29 3 27 0;
 #X connect 29 3 26 0;
-#X connect 29 3 43 0;
-#X connect 29 3 49 0;
-#X connect 30 0 48 1;
-#X connect 30 1 49 1;
+#X connect 29 3 46 0;
+#X connect 29 3 48 0;
+#X connect 30 0 44 1;
+#X connect 30 1 48 1;
 #X connect 30 2 47 1;
-#X connect 30 3 43 1;
+#X connect 30 3 46 1;
 #X connect 31 0 33 0;
 #X connect 32 0 35 0;
 #X connect 33 0 34 0;
@@ -185,15 +186,18 @@
 #X connect 34 1 25 1;
 #X connect 35 0 25 0;
 #X connect 35 1 25 1;
-#X connect 40 0 32 0;
-#X connect 41 0 25 0;
-#X connect 41 1 25 1;
-#X connect 42 0 10 0;
-#X connect 42 1 1 0;
-#X connect 43 0 31 0;
-#X connect 44 0 46 0;
-#X connect 45 0 44 0;
-#X connect 46 0 0 0;
-#X connect 47 0 40 0;
-#X connect 48 0 40 0;
-#X connect 49 0 31 0;
+#X connect 40 0 10 0;
+#X connect 40 1 1 0;
+#X connect 41 0 43 0;
+#X connect 42 0 41 0;
+#X connect 43 0 0 0;
+#X connect 44 0 45 0;
+#X connect 45 0 32 0;
+#X connect 46 0 31 0;
+#X connect 47 0 45 0;
+#X connect 48 0 31 0;
+#X connect 50 0 51 0;
+#X connect 51 0 33 1;
+#X connect 51 1 34 1;
+#X connect 51 2 35 1;
+#X connect 51 3 45 1;

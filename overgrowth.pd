@@ -12,6 +12,7 @@
 #X obj 318 47 r START-BANG;
 #X obj 318 69 t b;
 #X obj 152 258 *~ 0.08;
+#X obj 296 20 inlet;
 #X connect 0 0 1 0;
 #X connect 0 0 4 0;
 #X connect 2 0 6 0;
@@ -25,3 +26,4 @@
 #X connect 10 0 11 0;
 #X connect 11 0 8 0;
 #X connect 12 0 4 0;
+#X connect 13 0 11 0;
